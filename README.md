@@ -18,6 +18,26 @@ Mail:-shaikhafrin1607@gmail.com
 
 A Java-based console application that simulates an student Managment system.To build a simple application to manage student records — add, update, delete, and view student information — using Java and Hibernate ORM for database interaction.
 
+#Project Structure
+
+student-management/
+│
+├─ src/main/java/
+│   └─ com.example.sms/
+│         ├─ entity/
+│         │     └─ Student.java
+│         ├─ dao/
+│         │     └─ StudentDao.java
+│         ├─ util/
+│         │     └─ HibernateUtil.java
+│         └─ App.java
+│
+├─ src/main/resources/
+│   └─ hibernate.cfg.xml
+│
+└─ pom.xml
+
+
 # ✨ Features
 
 Add new students with details like name, email.
@@ -32,11 +52,14 @@ List all students from the database.
 
 Java: Core programming language.
 
-Hibernate: ORM framework that handles database operations and maps Java objects to database tables.
-
 MySQL: Relational database to store student data.
 
-Maven: For dependency management.
+Jakarta Persistence (JPA) – ORM specification used by Hibernate.
+
+Hibernate 7.0.5 – ORM framework implementing JPA.
+
+Maven – Manages project dependencies.
+
 
 # 📦 Dependencies
 
@@ -117,6 +140,7 @@ Maven: For dependency management.
 
 
 ## 🗃️ Database Tables
+
   CREATE TABLE student (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
